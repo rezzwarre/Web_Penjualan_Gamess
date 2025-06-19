@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Moonrocks&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #1e2a38, #0c1b2a);
+}
+
+/* Gunakan ini di ke 4 halaman */
+
+header {
+  background: linear-gradient(to right, #1e2a38, #0c1b2a);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Lobster";
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #f7f7f7;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Lobster", cursive;
+  padding: 0.1rem;
+  display: inline-block;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0b3c9e;
+  color: aqua;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+  background: url("Gambar/bggame4.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /*Transparansi gambar */
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  animation: fadeInUp 1s ease-out;
+  font-family: "Montserrat";
+  color: #7ca7e8;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #d1faff;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+.hero2 {
+  /*h2 Untuk halaman produk */
+  background: url("Gambar/bggame5.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.hero2::before::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* transparansi hitam */
+  z-index: 1;
+}
+
+.hero2 > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero2 h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  animation: fadeInUp 1s ease-out;
+  font-family: "Montserrat";
+  color: #7ca7e8;
+}
+
+.hero h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+  background: linear-gradient(to right, #1e2a38, #0c1b2a);
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  flex: 1;
+  font-size: 16px;
+}
+
+.search-box button {
+  background: #6e840a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #005ce6;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: linear-gradient(to right, #1e2a38, #0c1b2a);
+}
+
+.produk {
+  background: #444d65;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produk img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.produk img:hover {
+  transform: scale(1.1);
+}
+.produk button {
+  background: #6e840a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.produk button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.produk button:active {
+  transform: scale(0.98);
+}
+
+.cart-icon {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-icon i {
+  color: #fff;
+}
+
+.count-badge {
+  background: #ff3b3f;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/*<===================================================Bagian Penawaran Menarik=========================================> */
+.penawaran {
+  background: linear-gradient(to right, #1e2a38, #0c1b2a);
+  padding: 40px 20px;
+}
+.wadah_penawaran {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.produk_penawaran{
+  flex: 1 1 300px;
+  text-align: center;
+}
+.produk_penawaran img {
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 90%;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+.wadah_teks_penawaran{
+  flex: 1 1 300px; 
+  padding: 40px; 
+  color: #ffffff;
+}
+.wadah_teks_penawaran h2{
+  margin-top: 0; 
+  font-size: 2rem; 
+  color: #00ffc8;
+}
+.wadah_teks_penawaran p{
+  font-size: 16px; 
+  line-height: 1.6;
+}
+
+
+.bestsellerButton {
+  background: linear-gradient(135deg, #74c22f, #338106);
+  color: rgb(255, 255, 255);
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bestsellerButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/*<<=========================================================================================>> */
+
+
+/*======= Style.css_Tentang ============*/
+.tentang-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #364b64, #1a3957);
+}
+
+.tentang-text {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.tentang-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fefdff;
+  font-family: "Montserrat";
+}
+
+.tentang-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: white;
+}
+
+.tentang-image {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.tentang-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .tentang-container {
+    flex-direction: column;
+  }
+}
+
+/*<<=====================================================Footerr====================================>> */
+footer{
+  background: linear-gradient(to right, #47617f, #173859);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+footer div{
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+footer div h3{
+  margin-bottom: 10px;
+}
+footer div p{
+  font-size: 14px; 
+  max-width: 600px; 
+  margin: 0 auto 20px;
+}
+footer div div{
+  margin: 20px 0;
+}
+footer div div a{
+  margin: 0 10px; 
+  color: white; 
+  text-decoration: none;
+}
+.copy{
+  font-size: 12px;
+}
+/*<<=========================================================================================>> */
+
+/* <<<=====Style.css_Kontak=====>>> */
+.contact-section {
+  padding: 100px 20px;
+  background: linear-gradient(to right, #364b64, #1a3957);
+  color: #ffffff;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  color: #57ad44;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  color: #44ad4e;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #57ad44;
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #44ad52;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2f7538;
+}
+/*<<=========================================================================================>> */
+
+/*<<=====================================================Halaman_Produk====================================>> */
+/* Kategori_Produk*/
+.kategori {
+  margin-bottom: 3rem;
+}
+
+.kategori h2 {
+  color: #d9d9d9;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #141d1b;
+  padding-bottom: 0.5rem;
+}
+
+.produk2-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.produk2 {
+  background: #444d65;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 160px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.produk2:hover {
+  transform: scale(1.05);
+}
+
+.produk2 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.produk2 h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.produk2 p {
+  color: #0e1312;
+  font-weight: bold;
+}
+
+.produk2 button {
+  background: #6e840a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.produk2 button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.produk2 button:active {
+  transform: scale(0.98);
+}
+/*<<=========================================================================================>> */

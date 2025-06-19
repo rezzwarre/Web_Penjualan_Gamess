@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div class="logo">
+          <h1>Ngegame Skuyy</h1>
+        </div>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Game</a></li>
+          <li><a href="Tentang.html">Tentang</a></li>
+          <li><a href="Kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <!-- icon_keranjang -->
+      <div>
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="count-badge" id="cart-count">0</span>
+        </div>
+      </div>
+
+      <!-- Teks_Selamat_Datang -->
+      <div>
+        <h1>
+          Selamat Datang di Toko Online Kami! <br />Temukan game menarik dan
+          original hanya di sini.
+        </h1>
+      </div>
+
+      <!-- Navigasi_Serch -->
+      <div class="search-box">
+        <input type="text" placeholder="Cari produk..." />
+        <button>Cari</button>
+      </div>
+    </section>
+
+    <section class="produk-container">
+      <!-- Kilas_Produk -->
+      <div class="produk">
+        <img src="Gambar/Assassins-Creed-Mirage.png" alt="Produk 1" />
+        <h3>Assassins Creed Mirage</h3>
+        <p>Rp65.000</p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="produk">
+        <img
+          src="Gambar/resident-evil-4-mobile-edition-apk-obb-thumbnail.webp"
+          alt="Produk 2"
+        />
+        <h3>Resident Evil 4</h3>
+        <p>Rp100.000</p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="produk">
+        <img src="Gambar/godofwarragnarok.jpg" alt="Produk 3" />
+        <h3>God Of War Ragnarok</h3>
+        <p>Rp80.000</p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="produk">
+        <img src="Gambar/gta5.avif" alt="Produk 4" />
+        <h3>Grand Theft Auto 5</h3>
+        <p>Rp59.000</p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="produk">
+        <img src="Gambar/reddead.webp" alt="Produk 4" />
+        <h3>Red Dead Redaption 2</h3>
+        <p>Rp120.000</p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="produk">
+        <img src="Gambar/calofduty.webp" alt="Produk 4" />
+        <h3>Call Of Duty</h3>
+        <p>Rp59.000</p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+      </div>
+
+      <!-- Tambahkan produk lainnya di sini -->
+    </section>
+
+    <section class="penawaran">
+      <div class="wadah_penawaran">
+        <!-- Gambar di kiri -->
+        <div class="produk_penawaran">
+          <img
+            src="Gambar/resident-evil-4-mobile-edition-apk-obb-thumbnail.webp"
+            alt="Resident Evil 4"
+          />
+        </div>
+
+        <!-- Teks di kanan -->
+        <div class="wadah_teks_penawaran">
+          <h2>🔥 Game Terlaris Minggu Ini!</h2>
+          <p>
+            Hadapi kengerian tanpa batas di <strong>Resident Evil 4</strong> —
+            pengalaman survival horror legendaris kini hadir dengan grafis
+            modern dan gameplay yang lebih intens! Wajib dimiliki oleh semua
+            pecinta game aksi.
+          </p>
+          <button class="bestsellerButton" onclick="addToCart()">
+            🎮 Beli Sekarang
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="penawaran">
+      <div class="wadah_penawaran">
+        <!-- Teks di kiri -->
+        <div class="wadah_teks_penawaran">
+          <h2>⚔️ God of War: Ragnarok</h2>
+          <p>
+            Rasakan epik pertarungan antara Kratos dan dewa-dewa Nordik dalam
+            <strong>God of War: Ragnarok</strong>. Dengan grafik sinematik dan
+            alur cerita mendalam, game ini membawa pengalaman aksi-petualangan
+            ke level berikutnya!
+          </p>
+          <button class="bestsellerButton" onclick="addToCart()">
+            🎮 Beli Sekarang
+          </button>
+        </div>
+
+        <!-- Gambar di kanan -->
+        <div class="produk_penawaran">
+          <img src="Gambar/godofwarragnarok.jpg" alt="God of War Ragnarok" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <h3>Ngegame Skuyy</h3>
+        <p>
+          Game seru, hidup lebih greget! Terima kasih sudah mampir ke Ngegame
+          Skuyy — tempatnya beli game PC original dengan harga bersahabat. Stay
+          connected dan jangan sampai ketinggalan promo spesial!
+        </p>
+        <div>
+          <a href="#">Instagram</a>
+          |
+          <a href="#">Facebook</a>
+          |
+          <a href="#">Twitter</a>
+        </div>
+        <p class="copy">
+          &copy; 2025 Ngegame Skuyy. Powered by Gamers, for Gamers.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
